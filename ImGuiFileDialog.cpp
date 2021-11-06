@@ -1682,13 +1682,13 @@ namespace IGFD
 			auto v = (double)vByteSize;
 
 			if (v < lo)
-				return prRoundNumber(v, 0) + " o"; // octet
+				return prRoundNumber(v, 0); // octet
 			else if (v < ko)
-				return prRoundNumber(v / lo, 2) + " Ko"; // ko
+				return prRoundNumber(v / lo, 2) + "K"; // ko
 			else  if (v < mo)
-				return prRoundNumber(v / ko, 2) + " Mo"; // Mo 
+				return prRoundNumber(v / ko, 2) + "M"; // Mo 
 			else
-				return prRoundNumber(v / mo, 2) + " Go"; // Go 
+				return prRoundNumber(v / mo, 2) + "G"; // Go 
 		}
 
 		return "";
@@ -4046,7 +4046,7 @@ namespace IGFD
 							}
 							else
 							{
-								ImGui::Text("");
+								ImGui::Text("%s","");
 							}
 						}
 						if (ImGui::TableNextColumn()) // file date + time
