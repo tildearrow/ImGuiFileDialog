@@ -189,10 +189,10 @@ namespace IGFD
 #define tableHeaderFileDateString "Date"
 #endif // tableHeaderFileDateString
 #ifndef OverWriteDialogTitleString
-#define OverWriteDialogTitleString "The file Already Exist !"
+#define OverWriteDialogTitleString "The file already exists!"
 #endif // OverWriteDialogTitleString
 #ifndef OverWriteDialogMessageString
-#define OverWriteDialogMessageString "Would you like to OverWrite it ?"
+#define OverWriteDialogMessageString "Overwrite it?"
 #endif // OverWriteDialogMessageString
 #ifndef OverWriteDialogConfirmButtonString
 #define OverWriteDialogConfirmButtonString "Confirm"
@@ -2236,7 +2236,7 @@ namespace IGFD
 	{
 		if (!puDLGDirectoryMode) // if not directory mode
 		{
-			return vFileDialogInternal.puFilterManager.ReplaceExtentionWithCurrentFilter(std::string(puFileNameBuffer));
+			return puFileNameBuffer; //vFileDialogInternal.puFilterManager.ReplaceExtentionWithCurrentFilter(std::string(puFileNameBuffer));
 		}
 
 		return ""; // directory mode
