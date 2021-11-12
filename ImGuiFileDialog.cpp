@@ -138,7 +138,7 @@ namespace IGFD
 #define editPathButtonString "E"
 #endif // editPathButtonString
 #ifndef searchString
-#define searchString "Search :"
+#define searchString "Search"
 #endif // searchString
 #ifndef dirEntryString
 #define dirEntryString "[Dir]"
@@ -150,10 +150,10 @@ namespace IGFD
 #define fileEntryString "[File]"
 #endif // fileEntryString
 #ifndef fileNameString
-#define fileNameString "File Name :"
+#define fileNameString "File Name:"
 #endif // fileNameString
 #ifndef dirNameString
-#define dirNameString "Directory Path :"
+#define dirNameString "Directory Path:"
 #endif // dirNameString
 #ifndef buttonResetSearchString
 #define buttonResetSearchString "Reset search"
@@ -189,16 +189,16 @@ namespace IGFD
 #define tableHeaderFileDateString "Date"
 #endif // tableHeaderFileDateString
 #ifndef OverWriteDialogTitleString
-#define OverWriteDialogTitleString "The file already exists!"
+#define OverWriteDialogTitleString "Warning"
 #endif // OverWriteDialogTitleString
 #ifndef OverWriteDialogMessageString
-#define OverWriteDialogMessageString "Overwrite it?"
+#define OverWriteDialogMessageString "The file you selected already exists? Would you like to overwrite it?"
 #endif // OverWriteDialogMessageString
 #ifndef OverWriteDialogConfirmButtonString
-#define OverWriteDialogConfirmButtonString "Confirm"
+#define OverWriteDialogConfirmButtonString "Yes"
 #endif // OverWriteDialogConfirmButtonString
 #ifndef OverWriteDialogCancelButtonString
-#define OverWriteDialogCancelButtonString "Cancel"
+#define OverWriteDialogCancelButtonString "No"
 #endif // OverWriteDialogCancelButtonString
 // see strftime functionin <ctime> for customize
 #ifndef DateTimeFormat
@@ -3607,7 +3607,7 @@ namespace IGFD
 			}
 			else
 			{
-				beg = ImGui::Begin(name.c_str(), (bool*)nullptr, flags | ImGuiWindowFlags_NoScrollbar);
+				beg = ImGui::Begin(name.c_str(), (bool*)nullptr, flags | ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse);
 			}
 			if (beg)
 			{
